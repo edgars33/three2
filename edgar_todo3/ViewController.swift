@@ -37,11 +37,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @objc private func didTapAdd() {
-        let alert = UIAlertController(title : "New Item",
-                                      message: "Enter new item",
+        let alert = UIAlertController(title : "새로운걸 적으세요",
+                                      message: "입력해보세요",
                                       preferredStyle: .alert)
         alert.addTextField(configurationHandler: nil)
-        alert.addAction(UIAlertAction(title: "Submit", style: .cancel, handler: { [weak self] _ in
+        alert.addAction(UIAlertAction(title: "작성완료", style: .cancel, handler: { [weak self] _ in
         guard let field = alert.textFields?.first, let text = field.text, !text.isEmpty else {
             return
         }
@@ -150,10 +150,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         }
         
-        
-        
     }
         
-        
-        
     }
+
+
+//notification 키워드로 알람 구현해보기.
